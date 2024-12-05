@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ToastView" customModule="ToastViewDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajF-fn-PuP">
+                    <rect key="frame" x="0.0" y="59" width="393" height="80"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oRb-pZ-Brc">
+                            <rect key="frame" x="20" y="10.666666666666668" width="60" height="58.666666666666657"/>
+                            <color key="tintColor" systemColor="systemGreenColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="4LK-l9-SZT"/>
+                                <constraint firstAttribute="width" constant="60" id="JkY-mx-7iw"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LogIn Successful" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ar-g4-HI0">
+                            <rect key="frame" x="100" y="15" width="273" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="h9I-N7-a86"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <constraints>
+                        <constraint firstItem="1ar-g4-HI0" firstAttribute="centerY" secondItem="ajF-fn-PuP" secondAttribute="centerY" id="E2e-UQ-vr0"/>
+                        <constraint firstAttribute="height" constant="80" id="FWd-pc-RYK"/>
+                        <constraint firstAttribute="trailing" secondItem="1ar-g4-HI0" secondAttribute="trailing" constant="20" id="Vl7-Fl-Fbh"/>
+                        <constraint firstItem="oRb-pZ-Brc" firstAttribute="centerY" secondItem="ajF-fn-PuP" secondAttribute="centerY" id="mTU-Fg-y5g"/>
+                        <constraint firstItem="oRb-pZ-Brc" firstAttribute="leading" secondItem="ajF-fn-PuP" secondAttribute="leading" constant="20" id="oEX-YL-eGQ"/>
+                        <constraint firstItem="1ar-g4-HI0" firstAttribute="leading" secondItem="oRb-pZ-Brc" secondAttribute="trailing" constant="20" id="yoR-aN-VDu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ajF-fn-PuP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HpL-0L-YU4"/>
+                <constraint firstItem="ajF-fn-PuP" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="I5u-uQ-y32"/>
+                <constraint firstItem="ajF-fn-PuP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="yND-k2-0ur"/>
+            </constraints>
+            <connections>
+                <outlet property="checkmarkImage" destination="oRb-pZ-Brc" id="IE6-X1-0Fz"/>
+                <outlet property="mainToastView" destination="ajF-fn-PuP" id="S7B-9A-Pv9"/>
+                <outlet property="statusLabel" destination="1ar-g4-HI0" id="5ES-61-LX8"/>
+            </connections>
+            <point key="canvasLocation" x="23.664122137404579" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
